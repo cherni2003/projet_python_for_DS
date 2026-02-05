@@ -1,0 +1,103 @@
+================================================================================
+RAPPORT D'ANALYSE EXPLORATOIRE DES DONNÉES (EDA)
+Données Brutes - Sans Nettoyage
+================================================================================
+
+1. INFORMATIONS GÉNÉRALES
+--------------------------------------------------------------------------------
+
+
+POPULATION:
+  - Nombre de lignes: 240
+  - Nombre de colonnes: 3
+  - Colonnes: Rank, Country, Population
+  - Mémoire utilisée: 40.35 KB
+
+GDP:
+  - Nombre de lignes: 221
+  - Nombre de colonnes: 3
+  - Colonnes: Rank, Country, GDP (USD millions)
+  - Mémoire utilisée: 37.53 KB
+
+LIFE EXPECTANCY: Dataset vide
+
+
+2. QUALITÉ DES DONNÉES
+--------------------------------------------------------------------------------
+
+
+POPULATION:
+  ✅ Aucune valeur manquante
+
+  Doublons: 0
+
+  Types de données:
+    - Rank: str
+    - Country: str
+    - Population: str
+
+GDP:
+  ✅ Aucune valeur manquante
+
+  Doublons: 0
+
+  Types de données:
+    - Rank: str
+    - Country: str
+    - GDP (USD millions): str
+
+
+3. STATISTIQUES DESCRIPTIVES
+--------------------------------------------------------------------------------
+
+
+POPULATION:
+
+         Rank        Country Population
+count     240            240        240
+unique    240            240         54
+top     World  8,232,000,000       0.1%
+freq        1              1         23
+
+GDP:
+
+                 Rank Country GDP (USD millions)
+count             221     221                221
+unique            221     195                215
+top     United States    —N/a               —N/a
+freq                1      27                  7
+
+
+4. ÉCHANTILLONS DE DONNÉES (Premières 10 lignes)
+--------------------------------------------------------------------------------
+
+
+POPULATION:
+
+         Rank       Country Population
+        World 8,232,000,000       100%
+        India 1,417,492,000      17.2%
+        China 1,404,890,000      17.1%
+United States   341,784,857       4.2%
+    Indonesia   284,438,782       3.5%
+     Pakistan   241,499,431       2.9%
+      Nigeria   223,800,000       2.7%
+       Brazil   213,421,037       2.6%
+   Bangladesh   169,828,911       2.1%
+       Russia   146,028,325       1.8%
+
+
+GDP:
+
+          Rank    Country GDP (USD millions)
+ United States 30,615,743         28,750,956
+         China 19,398,577         18,743,803
+       Germany  5,013,574          4,685,593
+         Japan  4,279,828          4,027,598
+         India  4,125,213          3,909,892
+United Kingdom  3,958,780          3,686,033
+        France  3,361,557          3,160,443
+         Italy  2,543,677          2,380,825
+        Russia  2,540,656          2,173,836
+        Canada  2,283,599          2,243,637
+
