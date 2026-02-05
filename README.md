@@ -82,8 +82,8 @@ wikipedia-ml-pipeline/
 ### 🟦 Week 1 – Setup, Scraping & EDA
 - [x] Choix des sources Wikipedia
 - [x] Scripts de scraping (population, GDP, espérance de vie)
-- [ ] Sauvegarde des données brutes
-- [ ] Analyse exploratoire (EDA)
+- [x] Sauvegarde des données brutes
+- [x] Analyse exploratoire (EDA)
 
 ### 🟦 Week 2 – Preprocessing & Feature Engineering
 - [ ] Nettoyage des données
