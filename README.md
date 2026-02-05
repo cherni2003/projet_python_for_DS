@@ -1,154 +1,137 @@
-# Wikipedia Country Data Scraper
+# projet_python_for_data_science
+📌 Nom du projet
 
-Ce script Python permet de faire du web scraping des données de pays depuis Wikipedia.
+Wikipedia Socio-Economic Data Pipeline & Life Expectancy Prediction
 
-## 📊 Données collectées
+🎯 Objectifs du projet
 
-1. **Population** - Liste des pays par population
-2. **PIB** - Liste des pays par PIB nominal
-3. **Espérance de vie** - Liste des pays par espérance de vie
+🎯 Objectif général
 
-## 🚀 Installation
+Développer un pipeline complet de données et de machine learning à partir de données publiques issues de Wikipedia afin de prédire l’espérance de vie d’un pays.
 
-### 1. Installer Python
-Assurez-vous d'avoir Python 3.7+ installé sur votre système.
+🎯 Objectifs spécifiques
 
-### 2. Installer les dépendances
-```bash
-pip install -r requirements.txt
-```
+Scraper automatiquement plusieurs pages Wikipedia
 
-Ou installez les packages individuellement:
-```bash
-pip install requests beautifulsoup4 pandas openpyxl lxml
-```
+Nettoyer, standardiser et fusionner les données
 
-## 💻 Utilisation
+Réaliser une analyse exploratoire (EDA)
 
-### Utilisation basique
-```python
-python wikipedia_scraper.py
-```
+Construire un modèle de machine learning (Boosting)
 
-### Utilisation avancée dans votre code
+Exposer le modèle via une API REST
 
-```python
-from wikipedia_scraper import WikipediaScraper
+Développer une interface frontend
 
-# Créer une instance du scraper
-scraper = WikipediaScraper()
+Conteneuriser et déployer l’application
 
-# Scraper toutes les données et sauvegarder
-data = scraper.scrape_all(save_to_csv=True, save_to_excel=True)
+🌐 Liens des datasets à scraper (Sources)
 
-# Ou scraper individuellement
-df_population = scraper.scrape_population()
-df_gdp = scraper.scrape_gdp()
-df_life_expectancy = scraper.scrape_life_expectancy()
+Les données sont extraites des pages Wikipedia suivantes :
 
-# Accéder aux données
-population_df = data['population']
-gdp_df = data['gdp']
-life_expectancy_df = data['life_expectancy']
+Population par pays
+https://en.wikipedia.org/wiki/List_of_countries_and_dependencies_by_population
 
-# Faire des analyses
-print(population_df.head(10))
-print(gdp_df.describe())
-```
+PIB (GDP nominal) par pays
+https://en.wikipedia.org/wiki/List_of_countries_by_GDP_(nominal)
 
-## 📁 Fichiers de sortie
+Espérance de vie par pays
+https://en.wikipedia.org/wiki/List_of_countries_by_life_expectancy
 
-Le script génère automatiquement:
+➡️ Ces pages contiennent des tableaux structurés (wikitable) adaptés au web scraping.
 
-### Fichiers CSV (individuels)
-- `population_data.csv` - Données de population
-- `gdp_data.csv` - Données de PIB
-- `life_expectancy_data.csv` - Données d'espérance de vie
+🏗️ Architecture du projet
+🔹 Architecture globale
+<img width="1024" height="1536" alt="image" src="https://github.com/user-attachments/assets/daa8967a-6578-42fa-82ea-edd0f5586e0e" />
 
-### Fichier Excel (consolidé)
-- `countries_data.xlsx` - Toutes les données dans un seul fichier avec 3 feuilles
 
-## 📋 Structure des données
+📁 Architecture des dossiers
+wikipedia-ml-pipeline/
+│── data/
+│   ├── raw/              # Données brutes issues du scraping
+│   ├── processed/        # Données nettoyées et fusionnées
+│── scraping/             # Scripts de scraping Wikipedia
+│── preprocessing/        # Nettoyage et feature engineering
+│── modeling/             # Entraînement et évaluation ML
+│── api/                  # API FastAPI
+│── frontend/             # Application React
+│── docker/               # Dockerfiles et docker-compose
+│── notebooks/            # EDA et expérimentations
+│── README.md
+│── requirements.txt
 
-### Population
-- Rank (Rang)
-- Country (Pays)
-- Population
 
-### GDP
-- Rank (Rang)
-- Country (Pays)
-- GDP (USD millions)
+---
 
-### Life Expectancy
-- Country (Pays)
-- Life Expectancy (Overall)
-- Life Expectancy (Male)
-- Life Expectancy (Female)
+## 📦 Livrables
 
-## 🔧 Personnalisation
+- Scripts de web scraping
+- Datasets bruts (CSV)
+- Dataset final fusionné et nettoyé
+- Notebook d’analyse exploratoire (EDA)
+- Modèle de machine learning entraîné
+- API REST fonctionnelle
+- Interface frontend
+- Fichiers Docker
+- Rapport final et présentation
 
-### Changer le nombre de pays
-Modifiez la limite dans les fonctions de scraping:
-```python
-rows = table.find_all('tr')[1:51]  # Top 50 pays
-```
+---
 
-### Ajouter d'autres champs
-Ajoutez des colonnes supplémentaires en analysant plus de `cols`:
-```python
-additional_field = self.clean_text(cols[4].get_text())
-```
+## ✅ Checklist par phase
 
-### Exporter vers d'autres formats
-```python
-# JSON
-df.to_json('data.json', orient='records', indent=2)
+### 🟦 Week 1 – Setup, Scraping & EDA
+- [x] Choix des sources Wikipedia
+- [x] Scripts de scraping (population, GDP, espérance de vie)
+- [ ] Sauvegarde des données brutes
+- [ ] Analyse exploratoire (EDA)
 
-# Markdown
-df.to_markdown('data.md', index=False)
+### 🟦 Week 2 – Preprocessing & Feature Engineering
+- [ ] Nettoyage des données
+- [ ] Standardisation des noms des pays
+- [ ] Fusion des datasets
+- [ ] Création de nouvelles variables
 
-# HTML
-df.to_html('data.html', index=False)
-```
+### 🟦 Week 3 – Modeling & MLflow
+- [ ] Sélection du modèle (Boosting)
+- [ ] Entraînement du modèle
+- [ ] Évaluation des performances
+- [ ] Suivi des expériences avec MLflow
 
-## ⚠️ Notes importantes
+### 🟦 Week 4 – API Development
+- [ ] Création de l’API FastAPI
+- [ ] Endpoint de prédiction
+- [ ] Validation des données d’entrée
 
-1. **Respect des conditions d'utilisation**: Ce script respecte les conditions de Wikipedia
-2. **Rate limiting**: Des délais sont inclus pour ne pas surcharger les serveurs
-3. **User-Agent**: Un User-Agent est défini pour identifier les requêtes
-4. **Gestion des erreurs**: Le script gère les erreurs de connexion et de parsing
+### 🟦 Week 5 – Frontend Development
+- [ ] Interface utilisateur React
+- [ ] Connexion à l’API
+- [ ] Affichage des prédictions
 
-## 🐛 Dépannage
+### 🟦 Week 6 – Containerization
+- [ ] Dockerfile backend
+- [ ] Dockerfile frontend
+- [ ] Docker Compose
 
-### Erreur de connexion
-```python
-requests.exceptions.ConnectionError
-```
-- Vérifiez votre connexion internet
-- Vérifiez que Wikipedia est accessible
+### 🟦 Week 7 – Deployment & Final Review
+- [ ] Déploiement de l’application
+- [ ] Tests finaux
+- [ ] Rapport final
+- [ ] Soutenance
 
-### Erreur de parsing
-```python
-AttributeError: 'NoneType' object has no attribute 'find_all'
-```
-- La structure de la page Wikipedia a peut-être changé
-- Vérifiez les sélecteurs de table dans le code
+---
 
-### Données manquantes
-- Certaines cellules peuvent être vides sur Wikipedia
-- Le script gère ces cas avec des try/except
+## ⚠️ Aspects éthiques et légaux
+- Les données utilisées sont publiques et libres d’accès
+- Le scraping est réalisé de manière responsable
+- Aucune donnée personnelle n’est collectée
 
-## 📚 Ressources
+---
 
-- [Documentation BeautifulSoup](https://www.crummy.com/software/BeautifulSoup/bs4/doc/)
-- [Documentation Pandas](https://pandas.pydata.org/docs/)
-- [Documentation Requests](https://requests.readthedocs.io/)
 
-## 📄 Licence
 
-Ce script est fourni à des fins éducatives. Respectez les conditions d'utilisation de Wikipedia.
 
-## 🤝 Contribution
 
-N'hésitez pas à améliorer ce script et à partager vos modifications!
+
+
+
+Aucune donnée personnelle n’est collectée
