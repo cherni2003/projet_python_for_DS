@@ -86,10 +86,10 @@ wikipedia-ml-pipeline/
 - [x] Analyse exploratoire (EDA)
 
 ### 🟦 Week 2 – Preprocessing & Feature Engineering
-- [ ] Nettoyage des données
-- [ ] Standardisation des noms des pays
-- [ ] Fusion des datasets
-- [ ] Création de nouvelles variables
+- [x] Nettoyage des données
+- [x] Standardisation des noms des pays
+- [x] Fusion des datasets
+- [x] Création de nouvelles variables
 
 ### 🟦 Week 3 – Modeling & MLflow
 - [ ] Sélection du modèle (Boosting)
