@@ -92,10 +92,10 @@ wikipedia-ml-pipeline/
 - [x] Création de nouvelles variables
 
 ### 🟦 Week 3 – Modeling & MLflow
-- [ ] Sélection du modèle (Boosting)
-- [ ] Entraînement du modèle
-- [ ] Évaluation des performances
-- [ ] Suivi des expériences avec MLflow
+- [x] Sélection du modèle (Boosting)
+- [x] Entraînement du modèle
+- [x] Évaluation des performances
+- [x] Suivi des expériences avec MLflow
 
 ### 🟦 Week 4 – API Development
 - [ ] Création de l’API FastAPI
