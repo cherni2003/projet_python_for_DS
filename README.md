@@ -90,6 +90,12 @@ wikipedia-ml-pipeline/
 - [ ] Standardisation des noms des pays
 - [ ] Fusion des datasets
 - [ ] Création de nouvelles variables
+=======
+- [x] Nettoyage des données
+- [x] Standardisation des noms des pays
+- [x] Fusion des datasets
+- [x] Création de nouvelles variables
+>>>>>>> e0ffcee7be3614707735421268243643a31dcf88
 
 ### 🟦 Week 3 – Modeling & MLflow
 - [ ] Sélection du modèle (Boosting)
