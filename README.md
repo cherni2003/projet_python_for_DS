@@ -98,14 +98,14 @@ wikipedia-ml-pipeline/
 - [x] Suivi des expériences avec MLflow
 
 ### 🟦 Week 4 – API Development
-- [ ] Création de l’API FastAPI
-- [ ] Endpoint de prédiction
-- [ ] Validation des données d’entrée
+- [x] Création de l’API FastAPI
+- [x] Endpoint de prédiction
+- [x] Validation des données d’entrée
 
 ### 🟦 Week 5 – Frontend Development
-- [ ] Interface utilisateur React
-- [ ] Connexion à l’API
-- [ ] Affichage des prédictions
+- [x] Interface utilisateur React
+- [x] Connexion à l’API
+- [x] Affichage des prédictions
 
 ### 🟦 Week 6 – Containerization
 - [ ] Dockerfile backend
