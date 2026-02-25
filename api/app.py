@@ -24,9 +24,11 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+
+
 # ── Model loading ──────────────────────────────────────────────────────────────
-LIFE_EXP_MODEL_PATH  = os.path.join("data", "LifeExpectancyBestModel.pkl")
-DEV_LEVEL_MODEL_PATH = os.path.join("data", "DevelopmentLevelBestModel.pkl")
+LIFE_EXP_MODEL_PATH  = r"C:\Users\Cherni Oumaima\Desktop\projet_python_for_DS\data\LifeExpectancyBestModel.pkl"
+DEV_LEVEL_MODEL_PATH = r"C:\Users\Cherni Oumaima\Desktop\projet_python_for_DS\data\DevelopmentLevelBestModel.pkl"
 
 def load_model(path: str):
     if os.path.exists(path):
